@@ -17,7 +17,9 @@ simpleExample() {
 
 func passParameters(closure: (Int, Int) -> Void) {
     print("First line")
-    closure(4, 8)
+    // 클로저의 반환값이 Void이므로 아무 값도 출력됮 않음
+    let value = closure(4, 8)
+    print("value: \(value)")
     print("Second line")
 }
 
@@ -35,5 +37,5 @@ func retrunValue(closure: (Int, Int) -> Int) {
 }
 
 retrunValue() { x, y in
-    x + y
+    return x + y
 }
