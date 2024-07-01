@@ -16,15 +16,31 @@ struct ContentView: View {
         VStack {
             Button("click Me") {
                 let startTime = NSDate()
-                let fetchData = fetchSomethingFromeServer()
-                let processData = processData(fetchData)
-                let firstResult = calculateFirstResult(processData)
-                let secondResult = calculateSecoundResult(processData)
-                let resultsSummary = "First: [\(firstResult)]\nSecond: [\(secondResult)"
-                results = resultsSummary
-                
-                let endTime = NSDate()
-                message = "Completed in \(endTime.timeIntervalSince(startTime as Date)) seconds."
+                let queue = DispatchQueue.global(qos: .default)
+                queue.async {
+                    let fetchData = fetchSomethingFromeServer()
+                    let processData = processData(fetchData)
+                    
+                    var firstResult: String!
+                    var secondResult: String!
+                    let group = DispatchGroup()
+                    
+                    queue.async(group: group) {
+                        firstResult = calculateFirstResult(processData)
+                    }
+                    
+                    queue.async(group: group) {
+                        secondResult = calculateSecoundResult(processData)
+                    }
+                    
+                    group.notify(queue: queue) {
+                        let resultsSummary = "First: [\(firstResult!)]\nSecond: [\(secondResult!)]"
+                        results = resultsSummary
+                        
+                        let endTime = NSDate()
+                        message = "Completed in \(endTime.timeIntervalSince(startTime as Date)) seconds."
+                    }
+                }
             }
             TextEditor(text: $results)
             Slider(value: $sliderValue)
