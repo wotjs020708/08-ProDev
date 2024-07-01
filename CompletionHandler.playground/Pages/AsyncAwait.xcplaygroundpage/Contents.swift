@@ -6,8 +6,8 @@ enum BigError: Error {
 }
 
 enum Response {
-    case success
-    case failure
+    case ok
+    case no
 }
 
 let startTime = NSDate()
@@ -22,7 +22,7 @@ func doSomething(completion: (Result<Response, BigError>) -> Void) {
         return
     }
 
-    completion(.success(.success))
+    completion(.success(.ok))
 }
 
 doSomething { result in
