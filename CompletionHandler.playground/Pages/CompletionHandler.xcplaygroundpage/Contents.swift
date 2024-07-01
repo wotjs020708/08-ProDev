@@ -12,28 +12,35 @@ enum Response {
 
 let startTime = NSDate()
 
-func doSomething(completion: (Result<Response, BigError>) -> Void) {
+func doSomething() async throws -> Response {
     print("Start task")
     Thread.sleep(forTimeInterval: 2)
 
     let randomNumber = Int.random(in: 0..<2)
     if randomNumber == 0 {
-        completion(.failure(.powerOutage))
-        return
+        throw BigError.powerOutage
     }
 
-    completion(.success(.ok))
+    return Response.ok
 }
 
-doSomething { result in
-    switch result {
-    case .success(let response):
-        print("Result = \(response)")
-    case .failure(let error):
-        print("This is the error = \(error)")
+func callFunction() {
+    Task(priority: .low) {
+        do {
+            let result = try await doSomething()
+            print("Result = \(result)")
+        } catch {
+            if let whatError = error as? BigError {
+                print("This is the error = \(whatError)")
+            } else {
+                print("Unknown error")
+            }
+        }
+        print("ending task")
     }
-    print("End task")
 }
+
+callFunction()
 
 let endTime = NSDate()
 print("Completed in \(endTime.timeIntervalSince(startTime as Date)) seconds.")
