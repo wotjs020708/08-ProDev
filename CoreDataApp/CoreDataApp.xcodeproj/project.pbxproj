@@ -13,6 +13,7 @@
 		4B2C52AB2C339BD200ECE8B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C52AA2C339BD200ECE8B6 /* Preview Assets.xcassets */; };
 		4B2C52AD2C339BD200ECE8B6 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C52AC2C339BD200ECE8B6 /* Persistence.swift */; };
 		4B2C52B02C339BD200ECE8B6 /* CoreDataApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C52AE2C339BD200ECE8B6 /* CoreDataApp.xcdatamodeld */; };
+		4B2C52B72C339DDB00ECE8B6 /* CoreDataManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C52B62C339DDB00ECE8B6 /* CoreDataManger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4B2C52AA2C339BD200ECE8B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B2C52AC2C339BD200ECE8B6 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		4B2C52AF2C339BD200ECE8B6 /* CoreDataApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataApp.xcdatamodel; sourceTree = "<group>"; };
+		4B2C52B62C339DDB00ECE8B6 /* CoreDataManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				4B2C52A72C339BD200ECE8B6 /* Assets.xcassets */,
 				4B2C52AC2C339BD200ECE8B6 /* Persistence.swift */,
 				4B2C52AE2C339BD200ECE8B6 /* CoreDataApp.xcdatamodeld */,
+				4B2C52B62C339DDB00ECE8B6 /* CoreDataManger.swift */,
 				4B2C52A92C339BD200ECE8B6 /* Preview Content */,
 			);
 			path = CoreDataApp;
@@ -143,6 +146,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B2C52B72C339DDB00ECE8B6 /* CoreDataManger.swift in Sources */,
 				4B2C52B02C339BD200ECE8B6 /* CoreDataApp.xcdatamodeld in Sources */,
 				4B2C52AD2C339BD200ECE8B6 /* Persistence.swift in Sources */,
 				4B2C52A62C339BD100ECE8B6 /* ContentView.swift in Sources */,
