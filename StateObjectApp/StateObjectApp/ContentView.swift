@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  BindingApp
+//  StateObjectApp
 //
 //  Created by 어재선 on 7/2/24.
 //
@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var message = ""
     var body: some View {
         VStack {
-            Text("Hello, \(message)")
-            DisplayTextField(newVariable: $message)
+            Image(systemName: "globe")
+                .imageScale(.large)
+                .foregroundStyle(.tint)
+            Text("Hello, world!")
         }
         .padding()
     }
@@ -21,5 +22,3 @@ struct ContentView: View {
 #Preview {
     ContentView()
 }
-
-
