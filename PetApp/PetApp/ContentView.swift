@@ -12,7 +12,7 @@ struct ContentView: View {
     
     @State var petName = ""
     @State var petBreed = ""
-    @State var patArray = [Animal]()
+    @State var petArray = [Animal]()
     var body: some View {
         VStack {
             TextField("Enter pet name", text: $petName)
@@ -20,12 +20,27 @@ struct ContentView: View {
             Button("Save") {
                 coreDM.savePet(name: petName, breed: petBreed)
                 
+                displayPets()
                 petName = ""
                 petBreed = ""
             }
-            
+            List {
+                ForEach(petArray, id:\.self) { pet in
+                    VStack {
+                        Text(pet.name ?? "")
+                        Text(pet.breed ?? "")
+                    }
+                }
+            }
         }
         .padding()
+        .onAppear() {
+            displayPets()
+        }
+    }
+    
+    func displayPets() {
+        petArray = coreDM.getAllPets()
     }
 }
 
