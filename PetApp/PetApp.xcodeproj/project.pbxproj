@@ -12,6 +12,7 @@
 		4B2C52C92C33BAC200ECE8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C52C82C33BAC200ECE8B6 /* Assets.xcassets */; };
 		4B2C52CC2C33BAC200ECE8B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C52CB2C33BAC200ECE8B6 /* Preview Assets.xcassets */; };
 		4B2C52D42C33BAD300ECE8B6 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C52D22C33BAD300ECE8B6 /* DataModel.xcdatamodeld */; };
+		4B2C52D62C33BB2D00ECE8B6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C52D52C33BB2D00ECE8B6 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4B2C52C82C33BAC200ECE8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2C52CB2C33BAC200ECE8B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B2C52D32C33BAD300ECE8B6 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		4B2C52D52C33BB2D00ECE8B6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				4B2C52C42C33BAC100ECE8B6 /* PetAppApp.swift */,
 				4B2C52C62C33BAC100ECE8B6 /* ContentView.swift */,
 				4B2C52D22C33BAD300ECE8B6 /* DataModel.xcdatamodeld */,
+				4B2C52D52C33BB2D00ECE8B6 /* CoreDataManager.swift */,
 				4B2C52C82C33BAC200ECE8B6 /* Assets.xcassets */,
 				4B2C52CA2C33BAC200ECE8B6 /* Preview Content */,
 			);
@@ -142,6 +145,7 @@
 			files = (
 				4B2C52D42C33BAD300ECE8B6 /* DataModel.xcdatamodeld in Sources */,
 				4B2C52C72C33BAC100ECE8B6 /* ContentView.swift in Sources */,
+				4B2C52D62C33BB2D00ECE8B6 /* CoreDataManager.swift in Sources */,
 				4B2C52C52C33BAC100ECE8B6 /* PetAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
