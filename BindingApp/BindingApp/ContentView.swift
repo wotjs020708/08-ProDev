@@ -12,10 +12,7 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Text("Hello, \(message)")
-            HStack {
-                Text("Send a greeting:")
-                TextField("Type a message here", text: $message)
-            }
+            DisplayTextField(newVariable: $message)
         }
         .padding()
     }
@@ -23,4 +20,14 @@ struct ContentView: View {
 
 #Preview {
     ContentView()
+}
+
+struct DisplayTextField: View {
+    @Binding var newVariable: String
+    var body: some View {
+        HStack {
+            Text("Send a greeting:")
+            TextField("Type a message here", text: $newVariable)
+        }
+    }
 }
