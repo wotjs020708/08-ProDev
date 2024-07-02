@@ -8,15 +8,27 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var createText = ""
+    let placeHolder = "텍스트를 입력하세요."
+    @State var createText = "텍스트를 입력하세요."
     @State var displayText = ""
+    
+    @FocusState var textFieldFocus: Bool
     var body: some View {
         VStack {
             TextEditor(text: $createText)
+                .foregroundStyle(placeHolder == createText ? .gray : .black)
+                .focused($textFieldFocus)
+                .onChange(of: textFieldFocus) {
+                    if textFieldFocus, placeHolder == createText {
+                        createText = ""
+                    } else if !textFieldFocus, createText.isEmpty {
+                        createText = placeHolder
+                    }
+                }
             HStack {
                 Button(action:{
-                    let fm = FileManager.default
-                    let urls = fm.urls(for: .documentDirectory, in: .userDomainMask)
+                    
+                    let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
                     let url = urls.last?.appendingPathComponent("file.txt")
                     do {
                         try createText.write(to: url!, atomically: true, encoding: String.Encoding.utf8)
