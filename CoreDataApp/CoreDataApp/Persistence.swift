@@ -54,4 +54,38 @@ struct PersistenceController {
         })
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
+    // Create
+    func savePet(name: String, breed: String) {
+        let pet = Animal(context: container.viewContext)
+        pet.name = name
+        pet.breed = breed
+        do {
+            try container.viewContext.save()
+            print("Pet saved!")
+        } catch {
+            print("Failed to save pet \(error)")
+        }
+    }
+    // Read
+    func getAllPets() -> [Animal] {
+        let fetchRequest: NSFetchRequest<Animal> = Animal.fetchRequest()
+        do {
+            return try container.viewContext.fetch(fetchRequest)
+        } catch {
+            return []
+        }
+        
+    }
+    // Delete
+    func deletePet(animal: Animal) {
+        container.viewContext.delete(animal)
+        do {
+            try container.viewContext.save()
+        } catch {
+            container.viewContext.rollback()
+            print("Failed to save context \(error.localizedDescription)")
+        }
+    }
+
+    
 }
