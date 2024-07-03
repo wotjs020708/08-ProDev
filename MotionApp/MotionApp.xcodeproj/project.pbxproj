@@ -13,6 +13,7 @@
 		4BD7D5F42C350F6900AB580F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BD7D5F32C350F6900AB580F /* Preview Assets.xcassets */; };
 		4BD7D5FB2C35191200AB580F /* RotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7D5FA2C35191200AB580F /* RotationView.swift */; };
 		4BD7D5FD2C351CA900AB580F /* MagneticView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7D5FC2C351CA900AB580F /* MagneticView.swift */; };
+		4BD7D5FF2C351E6C00AB580F /* DeviceMotionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD7D5FE2C351E6C00AB580F /* DeviceMotionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		4BD7D5F32C350F6900AB580F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BD7D5FA2C35191200AB580F /* RotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotationView.swift; sourceTree = "<group>"; };
 		4BD7D5FC2C351CA900AB580F /* MagneticView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagneticView.swift; sourceTree = "<group>"; };
+		4BD7D5FE2C351E6C00AB580F /* DeviceMotionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMotionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				4BD7D5EC2C350F6700AB580F /* MotionAppApp.swift */,
+				4BD7D5FE2C351E6C00AB580F /* DeviceMotionView.swift */,
 				4BD7D5FA2C35191200AB580F /* RotationView.swift */,
 				4BD7D5EE2C350F6700AB580F /* AccelerationView.swift */,
 				4BD7D5FC2C351CA900AB580F /* MagneticView.swift */,
@@ -145,6 +148,7 @@
 			files = (
 				4BD7D5FD2C351CA900AB580F /* MagneticView.swift in Sources */,
 				4BD7D5EF2C350F6700AB580F /* AccelerationView.swift in Sources */,
+				4BD7D5FF2C351E6C00AB580F /* DeviceMotionView.swift in Sources */,
 				4BD7D5ED2C350F6700AB580F /* MotionAppApp.swift in Sources */,
 				4BD7D5FB2C35191200AB580F /* RotationView.swift in Sources */,
 			);
