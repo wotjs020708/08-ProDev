@@ -8,17 +8,37 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var searchText = ""
+    
+    let petArray = ["Cat", "Dog", "Fish", "Donkey", "Canary", "Camel", "Frog"]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            PetListView(animals: petArray)
+                .navigationTitle("SearchApp")
         }
-        .padding()
+        .navigationBarTitleDisplayMode(.automatic)
+        .searchable(text: $searchText) {
+            // serchText 가 비었을 경우, hasPrefix는 true 를 리턴
+            // 배열의 모든 요소가 출력됨
+            ForEach(petArray.filter { $0.hasPrefix(searchText)}, id: \.self) {
+                name in
+                Text(name)
+            }
+        }
+        
     }
 }
 
 #Preview {
     ContentView()
+}
+
+struct PetListView: View {
+    let animals: [String]
+    var body: some View {
+        List(animals, id: \.self) { animals in
+            Text(animals)
+        }
+        .listStyle(.plain)
+    }
 }
