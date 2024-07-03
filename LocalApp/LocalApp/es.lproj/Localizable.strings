@@ -5,5 +5,6 @@
   Created by 어재선 on 7/3/24.
   
 */
-"greeting-label" = "Hola Mundo";
+"greeting-label %@" = "Hola, %@";
 "button-label" = "Tocame";
+"placeholder-label" = "Escriba aquí";
