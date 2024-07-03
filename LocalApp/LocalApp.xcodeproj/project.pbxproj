@@ -11,6 +11,7 @@
 		4B2C531E2C34D17D00ECE8B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B2C531D2C34D17D00ECE8B6 /* ContentView.swift */; };
 		4B2C53202C34D17E00ECE8B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C531F2C34D17E00ECE8B6 /* Assets.xcassets */; };
 		4B2C53232C34D17E00ECE8B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C53222C34D17E00ECE8B6 /* Preview Assets.xcassets */; };
+		4B2C532B2C34D40D00ECE8B6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4B2C53292C34D40D00ECE8B6 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,10 @@
 		4B2C531D2C34D17D00ECE8B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B2C531F2C34D17E00ECE8B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B2C53222C34D17E00ECE8B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4B2C532A2C34D40D00ECE8B6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B2C532C2C34D42100ECE8B6 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B2C532D2C34D42200ECE8B6 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		4B2C532E2C34D42300ECE8B6 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +59,7 @@
 				4B2C531B2C34D17D00ECE8B6 /* LocalAppApp.swift */,
 				4B2C531D2C34D17D00ECE8B6 /* ContentView.swift */,
 				4B2C531F2C34D17E00ECE8B6 /* Assets.xcassets */,
+				4B2C53292C34D40D00ECE8B6 /* Localizable.strings */,
 				4B2C53212C34D17E00ECE8B6 /* Preview Content */,
 			);
 			path = LocalApp;
@@ -104,12 +110,14 @@
 			};
 			buildConfigurationList = 4B2C53132C34D17D00ECE8B6 /* Build configuration list for PBXProject "LocalApp" */;
 			compatibilityVersion = "Xcode 14.0";
-			developmentRegion = en;
+			developmentRegion = ko;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 				ko,
+				fr,
+				es,
 			);
 			mainGroup = 4B2C530F2C34D17D00ECE8B6;
 			productRefGroup = 4B2C53192C34D17D00ECE8B6 /* Products */;
@@ -127,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B2C53232C34D17E00ECE8B6 /* Preview Assets.xcassets in Resources */,
+				4B2C532B2C34D40D00ECE8B6 /* Localizable.strings in Resources */,
 				4B2C53202C34D17E00ECE8B6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +153,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4B2C53292C34D40D00ECE8B6 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4B2C532A2C34D40D00ECE8B6 /* en */,
+				4B2C532C2C34D42100ECE8B6 /* fr */,
+				4B2C532D2C34D42200ECE8B6 /* ko */,
+				4B2C532E2C34D42300ECE8B6 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		4B2C53242C34D17E00ECE8B6 /* Debug */ = {
