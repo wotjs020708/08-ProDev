@@ -22,7 +22,7 @@ struct ContentView: View {
         .background(changeColor ? Color.red : Color.yellow)
     }
 }
-
+// 언어 미리보기
 #Preview("기본 - 한국어") {
     ContentView()
 }
