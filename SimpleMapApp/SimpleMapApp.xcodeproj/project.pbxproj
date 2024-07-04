@@ -12,6 +12,7 @@
 		4B3AED5E2C3659DB00692EFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3AED5D2C3659DB00692EFA /* Assets.xcassets */; };
 		4B3AED612C3659DB00692EFA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3AED602C3659DB00692EFA /* Preview Assets.xcassets */; };
 		4B3AED682C36841A00692EFA /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AED672C36841A00692EFA /* MapViewModel.swift */; };
+		4B3AED6A2C36928C00692EFA /* PlaceInfoPanel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AED692C36928C00692EFA /* PlaceInfoPanel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		4B3AED5D2C3659DB00692EFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3AED602C3659DB00692EFA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B3AED672C36841A00692EFA /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		4B3AED692C36928C00692EFA /* PlaceInfoPanel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceInfoPanel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				4B3AED592C3659DA00692EFA /* SimpleMapAppApp.swift */,
 				4B3AED5B2C3659DA00692EFA /* ContentView.swift */,
+				4B3AED692C36928C00692EFA /* PlaceInfoPanel.swift */,
 				4B3AED672C36841A00692EFA /* MapViewModel.swift */,
 				4B3AED5D2C3659DB00692EFA /* Assets.xcassets */,
 				4B3AED5F2C3659DB00692EFA /* Preview Content */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B3AED6A2C36928C00692EFA /* PlaceInfoPanel.swift in Sources */,
 				4B3AED5C2C3659DA00692EFA /* ContentView.swift in Sources */,
 				4B3AED5A2C3659DA00692EFA /* SimpleMapAppApp.swift in Sources */,
 				4B3AED682C36841A00692EFA /* MapViewModel.swift in Sources */,
