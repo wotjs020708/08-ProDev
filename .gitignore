@@ -134,4 +134,7 @@ iOSInjectionProject/
 # End of https://www.toptal.com/developers/gitignore/api/xcode,swift,macos
 
 *.xcconfig
+# Media
 *.mov
+*.mp4
+*.mp3
