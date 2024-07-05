@@ -7,18 +7,45 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
+    let medias = [MediaItem(fileName: "Bigbang - Monster",ext: .mp4),
+                  MediaItem(fileName: "sample",ext: .mp3),
+                  MediaItem(fileName: "sample2",ext: .mp3),
+                  MediaItem(fileName: "Samsung Premiere 2013 Opening",ext: .mov),
+                  MediaItem(fileName: "SaturnV",ext: .mov)]
+    
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        
+        NavigationStack {
+            List {
+                ForEach(medias) { media in
+                    NavigationLink(destination: DetailsView(media: media)){
+                        HStack{
+                            if media.ext == .mov || media.ext == .mp4 {
+                                Image(systemName: "video.fill")
+                            } else {
+                                Image(systemName: "music.note")
+                                
+                            }
+                            Text(media.fileName)
+                            
+                        }
+                    }
+                    
+                }
+            }
+            .navigationTitle("MediaPlayer")
         }
-        .padding()
+        
     }
 }
 
 #Preview {
-    ContentView()
+    
+    NavigationStack{
+        ContentView()
+    }
 }

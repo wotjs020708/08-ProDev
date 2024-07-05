@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct DetailsView: View {
+    let media: MediaItem
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        VStack {
+        
+            switch media.ext {
+            case .mp3:
+                AudioPlayerView(media: media)
+            case .mp4, .mov:
+                VideoPlayerView(media: media)
+            }
+        }
+        .navigationTitle(media.fileName)
+        
     }
 }
 
 #Preview {
-    DetailsView()
+    NavigationStack {
+        DetailsView(media: MediaItem(fileName: "sample", ext: .mp3))
+    }
 }

@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BD3C9132C3791CF004A8553 /* Samsung Premiere 2013 Opening.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4BD3C90E2C3791CF004A8553 /* Samsung Premiere 2013 Opening.mov */; };
+		4BD3C9142C3791CF004A8553 /* sample.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BD3C90F2C3791CF004A8553 /* sample.mp3 */; };
+		4BD3C9152C3791CF004A8553 /* Bigbang - Monster.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4BD3C9102C3791CF004A8553 /* Bigbang - Monster.mp4 */; };
+		4BD3C9162C3791CF004A8553 /* SaturnV.mov in Resources */ = {isa = PBXBuildFile; fileRef = 4BD3C9112C3791CF004A8553 /* SaturnV.mov */; };
+		4BD3C9172C3791CF004A8553 /* sample2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4BD3C9122C3791CF004A8553 /* sample2.mp3 */; };
+		4BD3C91A2C379210004A8553 /* AudioPlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD3C9192C379210004A8553 /* AudioPlayerManager.swift */; };
+		4BD3C91C2C37AEC9004A8553 /* MediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD3C91B2C37AEC9004A8553 /* MediaItem.swift */; };
+		4BD3C91E2C37B123004A8553 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD3C91D2C37B123004A8553 /* DetailsView.swift */; };
+		4BD3C9202C37B4A1004A8553 /* AudioPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD3C91F2C37B4A1004A8553 /* AudioPlayerView.swift */; };
+		4BD3C9222C37B567004A8553 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD3C9212C37B567004A8553 /* VideoPlayerView.swift */; };
 		4BF8D1CD2C3790870028EF39 /* SimpleMediaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8D1CC2C3790870028EF39 /* SimpleMediaAppApp.swift */; };
 		4BF8D1CF2C3790870028EF39 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF8D1CE2C3790870028EF39 /* ContentView.swift */; };
 		4BF8D1D12C3790890028EF39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF8D1D02C3790890028EF39 /* Assets.xcassets */; };
@@ -14,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BD3C90E2C3791CF004A8553 /* Samsung Premiere 2013 Opening.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = "Samsung Premiere 2013 Opening.mov"; sourceTree = "<group>"; };
+		4BD3C90F2C3791CF004A8553 /* sample.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample.mp3; sourceTree = "<group>"; };
+		4BD3C9102C3791CF004A8553 /* Bigbang - Monster.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bigbang - Monster.mp4"; sourceTree = "<group>"; };
+		4BD3C9112C3791CF004A8553 /* SaturnV.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = SaturnV.mov; sourceTree = "<group>"; };
+		4BD3C9122C3791CF004A8553 /* sample2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sample2.mp3; sourceTree = "<group>"; };
+		4BD3C9192C379210004A8553 /* AudioPlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerManager.swift; sourceTree = "<group>"; };
+		4BD3C91B2C37AEC9004A8553 /* MediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaItem.swift; sourceTree = "<group>"; };
+		4BD3C91D2C37B123004A8553 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		4BD3C91F2C37B4A1004A8553 /* AudioPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerView.swift; sourceTree = "<group>"; };
+		4BD3C9212C37B567004A8553 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
 		4BF8D1C92C3790870028EF39 /* SimpleMediaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleMediaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BF8D1CC2C3790870028EF39 /* SimpleMediaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleMediaAppApp.swift; sourceTree = "<group>"; };
 		4BF8D1CE2C3790870028EF39 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -32,6 +52,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BD3C9182C3791D6004A8553 /* Medias */ = {
+			isa = PBXGroup;
+			children = (
+				4BD3C9102C3791CF004A8553 /* Bigbang - Monster.mp4 */,
+				4BD3C90F2C3791CF004A8553 /* sample.mp3 */,
+				4BD3C9122C3791CF004A8553 /* sample2.mp3 */,
+				4BD3C90E2C3791CF004A8553 /* Samsung Premiere 2013 Opening.mov */,
+				4BD3C9112C3791CF004A8553 /* SaturnV.mov */,
+			);
+			path = Medias;
+			sourceTree = "<group>";
+		};
 		4BF8D1C02C3790870028EF39 = {
 			isa = PBXGroup;
 			children = (
@@ -53,7 +85,13 @@
 			children = (
 				4BF8D1CC2C3790870028EF39 /* SimpleMediaAppApp.swift */,
 				4BF8D1CE2C3790870028EF39 /* ContentView.swift */,
+				4BD3C91D2C37B123004A8553 /* DetailsView.swift */,
+				4BD3C9212C37B567004A8553 /* VideoPlayerView.swift */,
+				4BD3C91F2C37B4A1004A8553 /* AudioPlayerView.swift */,
+				4BD3C91B2C37AEC9004A8553 /* MediaItem.swift */,
+				4BD3C9192C379210004A8553 /* AudioPlayerManager.swift */,
 				4BF8D1D02C3790890028EF39 /* Assets.xcassets */,
+				4BD3C9182C3791D6004A8553 /* Medias */,
 				4BF8D1D22C3790890028EF39 /* Preview Content */,
 			);
 			path = SimpleMediaApp;
@@ -125,8 +163,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BD3C9162C3791CF004A8553 /* SaturnV.mov in Resources */,
 				4BF8D1D42C3790890028EF39 /* Preview Assets.xcassets in Resources */,
+				4BD3C9172C3791CF004A8553 /* sample2.mp3 in Resources */,
+				4BD3C9132C3791CF004A8553 /* Samsung Premiere 2013 Opening.mov in Resources */,
+				4BD3C9142C3791CF004A8553 /* sample.mp3 in Resources */,
 				4BF8D1D12C3790890028EF39 /* Assets.xcassets in Resources */,
+				4BD3C9152C3791CF004A8553 /* Bigbang - Monster.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +181,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				4BF8D1CF2C3790870028EF39 /* ContentView.swift in Sources */,
+				4BD3C91E2C37B123004A8553 /* DetailsView.swift in Sources */,
+				4BD3C9222C37B567004A8553 /* VideoPlayerView.swift in Sources */,
+				4BD3C9202C37B4A1004A8553 /* AudioPlayerView.swift in Sources */,
+				4BD3C91C2C37AEC9004A8553 /* MediaItem.swift in Sources */,
+				4BD3C91A2C379210004A8553 /* AudioPlayerManager.swift in Sources */,
 				4BF8D1CD2C3790870028EF39 /* SimpleMediaAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
