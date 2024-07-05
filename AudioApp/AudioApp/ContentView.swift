@@ -8,14 +8,28 @@
 import SwiftUI
 
 struct ContentView: View {
+    var audioPlayerManager = AudioPlayerManager()
+    @State var playAudio = false
+    
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Button {
+                if !playAudio {
+                    audioPlayerManager.play()
+                } else {
+                    audioPlayerManager.pause()
+                }
+                playAudio.toggle()
+            } label: {
+                Text(!playAudio ? "Play audio" : "Pause audio")
+            }
         }
         .padding()
+        .onAppear {
+            audioPlayerManager.loadAudio(name: "Small World", withExtension: "mp3")
+            
+        }
     }
 }
 
