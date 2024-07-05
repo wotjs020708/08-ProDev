@@ -12,7 +12,7 @@ class AudioPlayerManager {
     
     func loadAudio(name fileName: String, withExtension ext: String) {
         guard let url = Bundle.main.url(forResource: fileName, withExtension: ext) else {
-            print("Audio file not foundd")
+            print("Audio file not found")
             return
         }
         do {
