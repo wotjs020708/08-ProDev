@@ -21,8 +21,8 @@ struct ContentView: View {
             
             HStack{
                 Button {
-                    showSheet = true
                     sourceType = .photoLibrary
+                    showSheet = true
                 } label: {
                     Text("Photo library")
                         .font(.title2)
@@ -30,8 +30,8 @@ struct ContentView: View {
                 
                 Spacer()
                 Button {
-                    showSheet = true
                     sourceType = .camera
+                    showSheet = true
                 } label: {
                     Text("Camera")
                         .font(.title2)
@@ -40,7 +40,9 @@ struct ContentView: View {
         }
         .padding()
         .sheet(isPresented: $showSheet) {
+            // 첫번째 카메라 선택시 사진 라이브러리가 뜨는 문제가 있음.
             ImagePicker(sourceType: sourceType ,chosenImage: $image)
+                .ignoresSafeArea()
         }
     }
     
