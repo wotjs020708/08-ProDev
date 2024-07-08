@@ -10,32 +10,50 @@ import Speech
 
 struct ContentView: View {
     let audioEngine = AVAudioEngine()
-    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))
+    let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     
     @State var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     @State var recognitionTask: SFSpeechRecognitionTask?
     @State var message = ""
     @State var buttonStatus = true
+    @State var newColor: Color = .white
     
     var body: some View {
-        VStack {
-            TextEditor(text: $message)
-                .frame(width: 350, height: 400)
-            Button(buttonStatus ? "Start recording" : "stop recrding", action: {
-                buttonStatus.toggle()
-                if buttonStatus {
-                    stopRecording()
-                } else {
-                    startRecording()
-                }
-            })
+        VStack (spacing: 25){
+            Button {
+                recognizeSpeech()
+            } label: {
+                Text("Start recording")
+            }
+            TextField("Spoken text appears here", text: $message)
+            Button {
+                message = ""
+                newColor = .white
+                stopSpeech()
+            } label: {
+                Text("Stop recording")
+            }
+            .background(newColor)
+         
         }
-        .padding()
         .background()
     }
     
+    // MARK: - Methods
     
-    func startRecording() {
+    func checkSpokenCommand(commandString: String) {
+        switch commandString {
+        case "Purple":
+            newColor = .purple
+        case "Green":
+            newColor = .green
+        case "Yellow":
+            newColor = .yellow
+        default:
+            newColor = .white
+        }
+    }
+    func recognizeSpeech() {
         message = "Start recording"
         let node = audioEngine.inputNode
         recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
@@ -70,7 +88,7 @@ struct ContentView: View {
     }
     
     
-    func stopRecording() {
+    func stopSpeech() {
         audioEngine.stop()
         recognitionTask?.cancel()
         audioEngine.inputNode.removeTap(onBus: 0)
