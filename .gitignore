@@ -145,3 +145,5 @@ iOSInjectionProject/
 
 *.jpg
 *.png
+
+*.mlmodel
