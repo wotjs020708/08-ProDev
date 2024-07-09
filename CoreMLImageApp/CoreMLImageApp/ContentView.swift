@@ -63,7 +63,7 @@ struct ContentView: View {
             message = "Image not found: \(sentImage)"
             return
         }
-        let modelFile = try? MobileNetV2(configuration: MLModelConfiguration())
+        let modelFile = try? SqueezeNet(configuration: MLModelConfiguration())
         
         let model = try! VNCoreMLModel(for: modelFile!.model)
         
