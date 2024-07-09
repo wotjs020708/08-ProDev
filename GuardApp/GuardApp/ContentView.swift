@@ -26,12 +26,11 @@ struct ContentView: View {
     }
     
     func getImage(_ imageName: String) {
-        //정통적인 방법
-        if UIImage(named: imageName) != nil {
-            showImage = UIImage(named: imageName)!
-        } else {
-            showImage = UIImage(systemName: "xmark.octagon.fill")!
+        // guard 를 이용한 구문으로 변경
+        guard UIImage(named: imageName) != nil else {showImage = UIImage(systemName: "xmark.octagon.fill")!
+            return
         }
+        showImage = UIImage(named: imageName)!
     }
 }
 
